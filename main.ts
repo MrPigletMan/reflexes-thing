@@ -4,10 +4,54 @@ input.onButtonPressed(Button.A, function () {
             basic.clearScreen()
             basic.showNumber((input.runningTime() - Timer) / 1000)
         }
+        if (ABAB == 2) {
+            basic.clearScreen()
+            basic.showLeds(`
+                # . . . #
+                . # . # .
+                . . # . .
+                . # . # .
+                # . . . #
+                `)
+            Start2 = 0
+        }
+        if (ABAB == 3) {
+            basic.clearScreen()
+            basic.showLeds(`
+                # . . . #
+                . # . # .
+                . . # . .
+                . # . # .
+                # . . . #
+                `)
+            Start2 = 0
+        }
     }
 })
 input.onButtonPressed(Button.AB, function () {
     if (Start2 == 1) {
+        if (ABAB == 1) {
+            basic.clearScreen()
+            basic.showLeds(`
+                # . . . #
+                . # . # .
+                . . # . .
+                . # . # .
+                # . . . #
+                `)
+            Start2 = 0
+        }
+        if (ABAB == 2) {
+            basic.clearScreen()
+            basic.showLeds(`
+                # . . . #
+                . # . # .
+                . . # . .
+                . # . # .
+                # . . . #
+                `)
+            Start2 = 0
+        }
         if (ABAB == 3) {
             basic.clearScreen()
             basic.showNumber((input.runningTime() - Timer) / 1000)
@@ -16,13 +60,37 @@ input.onButtonPressed(Button.AB, function () {
 })
 input.onButtonPressed(Button.B, function () {
     if (Start2 == 1) {
+        if (ABAB == 1) {
+            basic.clearScreen()
+            basic.showLeds(`
+                # . . . #
+                . # . # .
+                . . # . .
+                . # . # .
+                # . . . #
+                `)
+            Start2 = 0
+        }
         if (ABAB == 2) {
             basic.clearScreen()
             basic.showNumber((input.runningTime() - Timer) / 1000)
         }
+        if (ABAB == 3) {
+            basic.clearScreen()
+            basic.showLeds(`
+                # . . . #
+                . # . # .
+                . . # . .
+                . # . # .
+                # . . . #
+                `)
+            Start2 = 0
+        }
     }
 })
 input.onGesture(Gesture.Shake, function () {
+    Start2 = 1
+    basic.clearScreen()
     Picker()
 })
 function Picker () {
